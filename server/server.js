@@ -15,7 +15,7 @@ connectDB()
 app.use(express.json({limit: '5mb'}))
 app.use(cookieParser());
 
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:5174', '']
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:5174', 'https://zoo-clinic.vercel.app']
 
 app.use(cors({
   origin: allowedOrigins,
