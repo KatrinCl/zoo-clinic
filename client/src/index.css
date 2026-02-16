@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-.service-card:hover .price {
-  @apply text-white;
-}
-
 ::-webkit-scrollbar{
   @apply hidden
 }
