@@ -21,7 +21,9 @@ const Docs = () => {
               <div className='flex justify-between'>
                 <p className='text-sm md:text-base text-gray-500'>{doc.speciality}</p>
                 <Tooltip text='Подробнее'>
-                  <img onClick={() => openModal(doc)} className='cursor-pointer w-5 h-5 transition-all duration-300 ease-in-out hover:scale-110' src={assets.help_icon} alt='' />
+                  <div className='w-8 h-8 flex items-center justify-center'>
+                    <img onClick={() => openModal(doc)} className='cursor-pointer w-5 h-5 md:w-6 md:h-6 transition-all duration-300 ease-in-out hover:scale-110' src={assets.help_icon} alt='' />
+                  </div>
                 </Tooltip>
               </div>
             </div>

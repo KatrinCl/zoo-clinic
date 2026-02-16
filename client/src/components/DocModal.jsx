@@ -14,8 +14,8 @@ const DocModal = ({ doc, isOpen, onClose }) => {
   return (
     <div onClick={handleOverlayClick} className='fixed inset-0 bg-black/70 flex items-center justify-center z-50'>
       <div className='bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] h-auto md:h-[60vh] flex shadow-2xl overflow-hidden relative'>
-        <div className='flex flex-col md:flex-row m-2'>
-          <img className='md:w-1/2 w-40 h-40' src={doc.image} alt='' />
+        <div className='flex flex-col md:flex-row m-2 w-full h-full'>
+          <img className='w-40 md:w-1/2 h-40 md:h-auto object-cover rounded-2xl' src={doc.image} alt='' />
           <div className='flex flex-col gap-6 mt-2 md:mt-14 px-4'>
             <p className='text-sm md:text-base text-gray-500'>{doc.skills}</p>
             <p className='text-lg md:text-2xl'>{doc.name}</p>

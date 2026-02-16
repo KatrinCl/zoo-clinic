@@ -15,7 +15,7 @@ const PopularServes = () => {
           <div className='flex flex-col md:grid md:grid-cols-5 gap-4 md:gap-6 items-center justify-center'>
             {popularServices.map((service, index) => (
               <div key={index} className='w-full flex justify-center md:justify-stretch'>
-                <div className='service-card border border-gray-100 rounded-2xl p-7 flex flex-col justify-between w-full h-40 md:h-44 md:w-90 gap-4 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-900 hover:text-white cursor-pointer'>
+                <div className='service-card border border-gray-100 rounded-2xl p-7 flex flex-col justify-between w-full h-40 md:h-44 md:w-90 gap-4 transition-all duration-300 ease-in-out md:hover:scale-105 md:hover:bg-blue-900 md:hover:text-white cursor-pointer'>
                   <h1 className='text-base'>{service.name}</h1>
                   <p className='price text-blue-900 text-base'>{service.price} руб.</p>
                 </div>

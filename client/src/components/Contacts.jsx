@@ -13,7 +13,7 @@ const Contacts = () => {
   const houseCoordinates = [56.970775, 41.023687]
 
   return (
-    <div className='flex flex-col md:flex-row gap-2 md:gap-6 m-2 md:m-10'>
+    <div className='flex flex-col md:flex-row gap-2 md:gap-6 mx-2 my-10 md:m-10'>
 
       <div className='flex flex-col gap-2 border border-gray-100 shadow-xl rounded-2xl p-10 md:w-1/2  md:h-80'>
         <h1 className='font-bold text-lg md:text-2xl'>Остались вопросы?</h1>
