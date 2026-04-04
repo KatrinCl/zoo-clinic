@@ -14,25 +14,21 @@ export const addDoctor = async (req, res) => {
             return res.json({ success: false, message: "Заполните обязательные поля" })
         }
 
-        // 3. Сжатие + конвертация
         const compressedBuffer = await sharp(req.file.buffer)
-            .resize({ width: 1200, withoutEnlargement: true }) //ограничиваем размер, чтобы не грузить огромные изображения
-            .webp({ quality: 85, effort: 4 }) //конвертируем в WebP с качеством 60%, effort 6 (сильно сжимает)
-            .toBuffer() //получаем готовый файл для отправки в ImageKit
+            .resize({ width: 1200, withoutEnlargement: true })
+            .webp({ quality: 85, effort: 4 })
+            .toBuffer()
 
         const fileBase64 = compressedBuffer.toString('base64')
 
-        // 4. Загрузка в ImageKit
         const uploadResponse = await imagekit.upload({
             file: fileBase64,
             fileName: `${Date.now()}.webp`,
             folder: '/doctors'
         })
 
-        // 4. URL картинки
         const imageUrl = uploadResponse.url
 
-        // 5. Сохранение врача
         await doctorModel.create({
             name,
             speciality,

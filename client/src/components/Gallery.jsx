@@ -2,23 +2,21 @@ import React, { useEffect, useRef, useState } from 'react'
 import { assets } from '../assets/assets'
 
 const Gallery = () => {
-  const slider = useRef()
+  const slider = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
   const [currentImage, setCurrentImage] = useState('')
-  const [canScrollLeft, setCanScrollLeft] = useState(false) // Можно ли прокручивать влево
-  const [canScrollRight, setCanScrollRight] = useState(true) // Можно ли прокручивать вправо
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
 
-  // Прокрутка влево
   const scrollLeft = () => {
     if (slider.current) {
       slider.current.scrollBy({
-        left: -600, // Расстояние прокрутки
+        left: -600,
         behavior: 'smooth',
       })
     }
   }
 
-  // Прокрутка вправо
   const scrollRight = () => {
     if (slider.current) {
       slider.current.scrollBy({
@@ -28,19 +26,16 @@ const Gallery = () => {
     }
   }
 
-  // Открытие фото
   const openImage = src => {
     setCurrentImage(src)
     setIsOpen(true)
   }
 
-  // Закрытие фото
   const closeImage = () => {
     setIsOpen(false)
     setCurrentImage('')
   }
 
-  // Эффект для отслеживания прокрутки
   useEffect(() => {
     const container = slider.current
     if (!container) return
@@ -51,7 +46,6 @@ const Gallery = () => {
       setCanScrollRight(scrollLeft + clientWidth < scrollWidth)
     }
 
-    // Проверяем при загрузке и при прокрутке
     checkScroll()
     container.addEventListener('scroll', checkScroll)
 
@@ -73,19 +67,18 @@ const Gallery = () => {
           </div>
         </div>
 
-        <div ref={slider} className='flex gap-0 overflow-x-auto'>
+        <div ref={slider} className='flex overflow-x-auto'>
           {[assets.i2, assets.i1, assets.i3, assets.i4, assets.i5, assets.i6].map((src, index) => (
-            <img onClick={() => openImage(src)} key={index} className='object-cover w-80 h-70 border border-gray-100 rounded-2xl cursor-pointer transition-all hover:scale-105 duration-300 ease-in-out m-5' src={src} alt='' />
+            <img onClick={() => openImage(src)} key={index} className='object-cover w-80  min-w-[320px] h-64 border border-gray-100 rounded-2xl cursor-pointer transition-all hover:scale-105 duration-300 ease-in-out m-5' src={src} alt='' />
           ))}
         </div>
       </div>
 
-      {/* Модальное окно для фото */}
       {isOpen && (
         <div className='fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4' onClick={closeImage}>
           <div
             className='relative max-w-full max-h-[90vh] bg-white rounded-lg shadow-2xl'
-            onClick={e => e.stopPropagation()} // Не закрываем при клике внутри
+            onClick={e => e.stopPropagation()}
           >
             <button className='absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-300 text-white flex items-center justify-center hover:bg-gray-500 transition-colors cursor-pointer' onClick={closeImage}>
               ×

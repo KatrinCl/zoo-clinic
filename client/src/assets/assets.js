@@ -31,9 +31,9 @@ import i6 from './i6.webp'
 import i7 from './i7.webp'
 import arrow_right from './arrow-right.svg'
 import arrow_left from './arrow-left.svg'
+import logo from './favicon.png'
 
-
-export const assets = {call, call1, cast, search_icon, surgery, usy, vet, help_icon, arrow_icon, i1, i2, i3, i4, i5, i6, i7, arrow_left, arrow_right}
+export const assets = {call, call1, cast, search_icon, surgery, usy, vet, help_icon, arrow_icon, i1, i2, i3, i4, i5, i6, i7, arrow_left, arrow_right, logo}
 
 export const dummyDataDoctors = [
     {

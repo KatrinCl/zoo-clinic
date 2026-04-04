@@ -1,5 +1,5 @@
 import React from 'react'
-import { assets, dummyDataDoctors } from '../assets/assets'
+import { assets } from '../assets/assets'
 import { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
 import DocModal from './DocModal'

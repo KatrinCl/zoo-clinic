@@ -7,9 +7,12 @@ const Navbar = () => {
   return (
     <div className='flex flex-col m-2 md:m-10'>
       <div className='flex justify-between'>
-        <Link to='/' className='text-2xl cursor-pointer'>
-          VetClinic
-        </Link>
+        <div className='flex gap-2 items-center'>
+          <Link to='/' className='text-2xl cursor-pointer'>
+            VetClinic
+          </Link>
+            <img className='w-6 h-6' src={assets.logo} alt="" />
+          </div>
         <p className='text-gray-700 hidden md:block'>Россия, Иваново, мкр. Видный, 1</p>
 
         <button onClick={() => setOpen(!open)} className='md:hidden text-3xl text-blue-900 cursor-pointer' aria-label='Открыть меню'>
