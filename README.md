@@ -6,6 +6,8 @@
 
 https://zoo-clinic.vercel.app
 
+https://github.com/KatrinCl/zoo-clinic
+
 ## 🚀 Возможности
 
 ### 👨‍⚕️ Пользовательская часть
@@ -68,3 +70,5 @@ https://zoo-clinic.vercel.app
 * Система оплаты
 
 ---
+
+Если есть вопросы или предложения — можете связаться со мной katya55293@gmail.com, 8-901-285-3563.
