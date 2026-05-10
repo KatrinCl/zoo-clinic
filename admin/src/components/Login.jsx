@@ -32,7 +32,7 @@ const Login = ({setIsAdmin}) => {
       <div className='max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow'>
         <div>
           <h2 className='mt-6 text-center text-3xl font-bold text-gray-900'>Авторизация</h2>
-          <p className='mt-2 text-center text-xl text-gray-600'>VetClinic</p>
+          <p className='mt-2 text-center text-xl text-gray-600'>PawCare</p>
         </div>
         <form className='mt-8 space-y-6' onSubmit={onSubmitHandler}>
           <div>
