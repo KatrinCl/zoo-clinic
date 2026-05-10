@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className='flex justify-between'>
         <div className='flex gap-2 items-center'>
           <Link to='/' className='text-2xl cursor-pointer'>
-            VetClinic
+            PawCare
           </Link>
             <img className='w-6 h-6' src={assets.logo} alt="" />
           </div>

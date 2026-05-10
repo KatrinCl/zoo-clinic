@@ -7,7 +7,7 @@ const Footer = () => {
       <hr className='text-gray-300 my-5' />
       <div className='flex flex-col md:flex-row justify-between m-2 md:m-5'>
         <div className='flex flex-col gap-4 md:w-1/2'>
-          <p>© Ветеринарная клиника VetClinic в Видном, 2026</p>
+          <p>© Ветеринарная клиника PawCare в Видном, 2026</p>
           <p className='text-gray-700 text-sm md:text-base'>Россия, Иваново, мкр. Видный, 1</p>
           <p className='text-gray-700 text-sm md:text-base'>Время работы: Пн-вс: 10:00—22:00</p>
           <p className='text-gray-500 text-sm md:text-base hidden md:block'>2012-2026 ©</p>
